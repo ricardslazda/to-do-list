@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Printful vasaras skolas uzdevums</title>
+	<title>To Do List</title>
 	<link rel="icon" href="<?php echo ROOT_URL ?>assets/images/logo.png" type="image/icon type">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -14,12 +14,10 @@
 </head>
 <body>
 <?php
-// Messages::setmsg('success', 'Uzdevums tika pievienots veiksmīgi!');
 Messages::display();
 ?>
-    <img src="<?php echo ROOT_URL ?>assets/images/printful.jpg" id="printful">
-    <main role="main" class="container">
-    <div class="row justify-content-center mt-5">
+    <main role="main" class="container mb-5">
+    <div class="row justify-content-center">
       <?php 
       require($view); 
       ?>

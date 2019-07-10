@@ -7,8 +7,7 @@ $('.input-group.date').datepicker({
 });  
 });
 </script>
-<h1 class="display-4 text-center mt-5">Rediģēt izvēlēto uzdevumu</h1>
-<img src="<?php echo ROOT_URL ?>images/printful.jpg" id="printful">
+<h1 class="display-4 text-center mt-5">To Do List</h1>
 <div class="container">
 	<form action="<?php $_SERVER['PHP_SELF'];?>" method="post" class="form-group">
 		<label class="lead">Virsraksts</label>

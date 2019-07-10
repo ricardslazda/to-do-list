@@ -7,5 +7,5 @@ define("DB_NAME", "database");
 
 // Define URL
 
-define("ROOT_PATH", "/todo-list/");
-define("ROOT_URL", "http://localhost/todo-list/");
+define("ROOT_PATH", "/to-do-list/");
+define("ROOT_URL", "http://localhost/to-do-list/");
