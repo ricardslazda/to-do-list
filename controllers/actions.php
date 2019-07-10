@@ -2,13 +2,17 @@
 class Actions extends Controller{
     protected function Add(){
         $viewmodel = new ActionModel();
-        $this->ReturnView($viewmodel->add(), true);
-        Messages::setmsg('success', 'Uzdevums tika pievienots');
+        $this->ReturnView($set_message = $viewmodel->add(), true);
+        if($set_message) {
+            Messages::setmsg('success', 'Uzdevums tika pievienots');
+        }
     }
     protected function Edit(){
         $viewmodel = new ActionModel();
-        $this->ReturnView($viewmodel->edit(), true);
-        Messages::setmsg('success', 'Uzdevums tika rediģēts');
+        $this->ReturnView($set_message = $viewmodel->edit(),true);
+        if($set_message) {
+            Messages::setmsg('success', 'Uzdevums tika rediģēts');
+        }
     }
     protected function Delete(){
         $viewmodel = new ActionModel();

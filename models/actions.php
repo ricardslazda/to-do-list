@@ -1,7 +1,7 @@
 <?php
 session_start();
 class ActionModel extends Model{
-    public function add(){
+    public function add() : bool{
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if(isset($post['add'])) {
         $this->query('INSERT INTO posts (title,body,date) VALUES (:title, :body, :date)');
@@ -12,10 +12,12 @@ class ActionModel extends Model{
 
             if($this->lastInsertId()) {
                 header('Location:'.ROOT_URL);
+                return true;
             }
         }
+        return false;
     }
-        public function edit(){
+        public function edit() : bool{
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         $uri = $_SERVER['REQUEST_URI'];
         $id = explode("/", $uri)[4];
@@ -31,7 +33,9 @@ class ActionModel extends Model{
                 $this->bind(':id', $id);
                 $this->execute();
                 header('Location:'.ROOT_URL);
+                return true;
         };
+        return false;
     }
         public function delete(){
         $uri = $_SERVER['REQUEST_URI'];
