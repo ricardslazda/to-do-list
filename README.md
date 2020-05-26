@@ -19,7 +19,11 @@ Simple to do list where user manages their tasks.
 
 ## Pictures
 
+![Image](docs/1.png)
 
+![Image](docs/2.png)
+
+![Image](docs/3.png)
 ## Author
 
 * **Ričards Lazda** - [Ričards Lazda](https://github.com/ricardslazda)
